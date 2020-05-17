@@ -1,0 +1,30 @@
+// PADDINGS
+.PageHeader {
+  @include padding-bottom(1);
+  @include padding-bottom(2);
+  @include media(s0) {
+  }
+}
+h3 {
+  @include media(s1) {
+    @include margin-bottom(-2);
+    // background-color: blue;
+  }
+}
+h4 {
+  @include media(s1) {
+    @include margin-bottom(0);
+    // background-color: blue;
+  }
+}
+ul {
+  @include padding-bottom(-2);
+}
+footer {
+  // @include margin-top(1);
+  @include padding-top(1);
+  // @include padding-bottom(0);
+}
+article {
+  @include margin-bottom(1);
+}

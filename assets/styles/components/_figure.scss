@@ -1,0 +1,25 @@
+.Figure {
+    @include margin-bottom(1);
+    // background-color: red;
+    img {
+      margin-bottom: 0;
+      transition: opacity .5s ease-in-out;
+    }
+    img.active ~ figcaption {
+      @include padding-top(0);
+      @include margin-top(-1);
+      opacity: 1;
+      animation-name: show;
+      animation-iteration-count: 1;
+      animation-duration: .3s;
+      background-color: $white;
+      border-top: 1px solid $light_grey;
+    }
+    figcaption {
+      opacity: .5;
+      text-align: left;
+      font-style: italic;
+      // @include type-setting(0);
+      @include margin-bottom(2);
+    }
+  }

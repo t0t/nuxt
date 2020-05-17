@@ -1,0 +1,39 @@
+//Blockquotes
+.BlockQuote {
+    // display: block;
+    padding-left: $h2;
+    border-left-color: $secondary;
+    border-left-style: solid;
+    border-left-width: 2px;
+    // width: 100%;
+    @include margin-top(0);
+    @include margin-bottom(2);
+  
+    p {
+      color: $grey;
+      font-style: italic;
+      margin-bottom: $h-2;
+      quotes: "«" "»";
+      &::first-letter {
+        font-size: 40px;
+        font-weight: bold;
+        position: absolute;
+        top: -200px;
+      }
+      &::before {
+        content: open-quote;
+      }
+      &::after {
+        content: close-quote;
+      }
+      // @include margin-bottom(1);
+    }
+    small {
+      font-weight: bold;
+      padding-bottom: 0;
+      color: $primary;
+      text-transform: uppercase;
+    }
+    @include media(s0) {
+    }
+  }

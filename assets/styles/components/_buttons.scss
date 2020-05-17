@@ -1,0 +1,21 @@
+// Buttons
+.ButtonDefault {
+    background-color: inherit;
+    border: none;
+    a {
+      padding: $h0 $h1;
+      color: $white;
+      text-decoration: none;
+      background-color: $alpha_black;
+      border-style: solid;
+      border-width: 5px;
+      border-color: $light_grey;
+      @include media(s1) {
+        @include type-setting(1);
+        font-weight: light;
+      }
+      &:hover {
+        background-color: $primary;
+      }
+    }
+  }

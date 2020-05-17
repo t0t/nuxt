@@ -1,0 +1,227 @@
+// ****************************************
+// BASE
+// ****************************************
+#app {
+  font-family: $primary_font;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+}
+
+body {
+  background-color: $white;
+  &.overflowHidden {
+    overflow: hidden;
+  }
+}
+small {
+  display: block;
+}
+
+img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: $secondary;
+}
+
+p {
+  @include margin-bottom(1);
+  @include media(s0) {
+    @include type-setting(0);
+  }
+  @include media(s1) {
+    @include type-setting(0);
+  }
+  @include media(s2) {
+    @include type-setting(0);
+  }
+  @include media(s3) {
+    @include type-setting(1);
+  }
+  @include media(s4) {
+    @include type-setting(2);
+  }
+}
+
+strong {
+  font-weight: bold;
+}
+
+img {
+  @include margin-bottom(1);
+}
+
+h1 {
+  @include media(s0) {
+    @include type-setting(0);
+  }
+  @include media(s1) {
+    @include type-setting(2);
+  }
+  @include media(s2) {
+    @include type-setting(3);
+  }
+  @include media(s3) {
+    @include type-setting(3);
+  }
+  @include media(s4) {
+    @include type-setting(6);
+  }
+}
+
+h2 {
+  @include media(s0) {
+    @include type-setting(0);
+  }
+  @include media(s1) {
+    @include type-setting(1);
+  }
+  @include media(s3) {
+    @include type-setting(2);
+  }
+  @include media(s4) {
+    @include type-setting(3);
+  }
+  @include media(s5) {
+    @include type-setting(4);
+  }
+}
+
+h3 {
+  @include media(s0) {
+    @include type-setting(0);
+  }
+  @include media(s1) {
+    font-weight: bold;
+    @include type-setting(1);
+  }
+  @include media(s2) {
+    @include type-setting(1);
+    // background-color: red;
+  }
+  @include media(s3) {
+    @include type-setting(2);
+  }
+  @include media(s4) {
+    @include type-setting(3);
+  }
+}
+
+h4,
+h5,
+h6 {
+  @include media(s0) {
+    @include type-setting(0);
+  }
+  @include media(s1) {
+    font-weight: bold;
+    @include type-setting(0);
+  }
+  @include media(s2) {
+    @include type-setting(0);
+  }
+  @include media(s3) {
+    @include type-setting(1);
+  }
+  @include media(s4) {
+    @include type-setting(2);
+  }
+}
+
+dl,
+ul, ol {
+  @include media(s0) {
+    @include type-setting(0);
+  }
+  @include media(s1) {
+    // font-weight: bold;
+    @include type-setting(0);
+  }
+  @include media(s2) {
+    @include type-setting(0);
+  }
+  @include media(s3) {
+    @include type-setting(1);
+  }
+  @include media(s4) {
+    @include type-setting(2);
+  }
+  @include media(s5) {
+    @include type-setting(2);
+  }
+}
+small,
+h6, h5 {
+  text-align: left;
+  @include padding-bottom(1);
+
+  @include media(s0) {
+    @include type-setting(0);
+  }
+  @include media(s1) {
+    @include type-setting(0);
+  }
+}
+
+pre, code {
+  font-family: monospace, monospace;
+  @include type-setting(0);
+  text-align: left;
+}
+pre {
+  overflow: auto;
+  background-color: $light_grey;
+  @include margin-bottom(1);
+  em {
+    color: green;
+  }
+  strong {
+    color: $secondary;
+  }
+}
+pre > code {
+  display: block;
+  padding: 1rem;
+  word-wrap: normal;
+}
+
+.title {
+  @include margin-top(1);
+  // @include margin-bottom(1);
+
+  @include media(s2) {
+    @include margin-top(2);
+    @include margin-bottom(1);
+    text-align: center;
+    // background-color: red;
+  }
+  @include media(s3) {
+    @include margin-top(4);
+    @include margin-bottom(2);
+    text-align: center;
+  }
+}
+
+// ****************************************
+// LAYOUT | MARGINS... SPACES
+// ****************************************
+
+
+// .golden-box {
+//   height: 100px;
+//   width: 100px * $phi;
+//   // background-color: red;
+// }
+
+
+// ****************************************
+// EXTRAS - DEBUGING
+// ****************************************
+
+// body * {
+//   border: 1px solid grey;
+// }

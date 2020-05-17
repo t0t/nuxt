@@ -1,0 +1,55 @@
+// ****************************************
+// @TODH TYPOGRAPHY AND FONTS
+// ****************************************
+
+// @font-face {
+//     font-family: 'Vollkorn';
+// src: url("~@/fonts/Vollkorn.eot"); /* IE9 Compat Modes */
+// src:    url('~assets/fonts/Vollkorn-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+//  url("~@/assets/fonts/Vollkorn-Regular.eot?#iefix") format('embedded-opentype'), /* IE6-IE8 */
+//  url("~@/fonts/Vollkorn.woff2") format('woff2'), /* Super Modern Browsers */
+//  url('./fonts/Vollkorn.woff') format('woff'), /* Pretty Modern Browsers */
+//  url('~@/assets/fonts/Vollkorn-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+//  url('./fonts/Vollkorn.svg#svgFontName') format('svg'); /* Legacy iOS */
+//   }
+// @import url('https://fonts.googleapis.com/css2?family=Girassol&display=swap');
+
+$primary_font: Avenir, Helvetica, Arial, sans-serif;
+$secondary_font: $primary_font;
+$tertiary_font: $secondary_font;
+
+
+body {
+  font-family: $primary_font;
+}
+h1 {
+  font-family: $primary;
+}
+
+h2 {
+  font-family: $tertiary_font;
+}
+
+h3, h4,
+p {
+  text-align: left;
+}
+
+small {
+  font-style: italic;
+}
+nav {
+  letter-spacing: 1px;
+  a {
+    text-decoration: none;
+  }
+}
+
+li {
+  font-weight: bold;
+}
+
+h1,
+dt {
+  font-weight: bold;
+}

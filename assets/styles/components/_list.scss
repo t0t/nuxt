@@ -1,0 +1,18 @@
+// Lists
+.List {
+    @include margin-bottom(2);
+    color: $grey;
+    li {
+      font-weight: inherit;
+      text-align: left;
+    }
+  }
+  .ListButllets {
+    list-style: circle inside;
+  }
+  .ListOrdered {
+    list-style: decimal-leading-zero inside;
+  }
+  .ListCursive {
+    font-style: italic;
+  }

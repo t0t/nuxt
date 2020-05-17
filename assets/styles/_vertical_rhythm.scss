@@ -1,0 +1,147 @@
+// ****************************************
+// @TODH BASE VARIABLES - phi: 1.6180339887498948482;
+// ****************************************
+
+$base_html_size: 16px;
+$global_scale_unit: rem;
+
+// ****************************************
+// @TODH VERTICAL RHYTHM
+// ****************************************
+
+html {
+  font-size: $base_html_size; // 16px
+}
+
+$base-font-size: 1rem;
+$base-line-height: $base-font-size * 1.618;
+
+// Breakpoints
+$s1: 300px;
+$s2: 540px;
+$s3: 1150px;
+$s4: 2300px;
+$s5: 3200px;
+
+//PHI based scaling ratio
+$h13: 321.916#{$global_scale_unit};
+$h12: 198.959#{$global_scale_unit};
+$h11: 122.966#{$global_scale_unit};
+$h10: 75.999#{$global_scale_unit};
+$h9: 46.971#{$global_scale_unit};
+$h8: 29.03#{$global_scale_unit};
+$h7: 17.942#{$global_scale_unit};
+$h6: 11.089#{$global_scale_unit};
+$h5: 6.854#{$global_scale_unit};
+$h4: 4.236#{$global_scale_unit};
+$h3: 2.618#{$global_scale_unit};
+$h2: 1.618#{$global_scale_unit};
+$h1: 1#{$global_scale_unit}; // 1.6180339887498948482px - 16px
+$h0: 0.618#{$global_scale_unit};
+$h-1: 0.382#{$global_scale_unit};
+$h-2: 0.236#{$global_scale_unit};
+$h-3: 0.146#{$global_scale_unit};
+$h-4: 0.09#{$global_scale_unit};
+
+// ****************************************
+// BASE RESPONSIVE
+// ****************************************
+
+/* Uso:
+@include media( s + scaling factor ) {
+  property: value;
+}
+*/
+@mixin media($media) {
+  @if $media == s0 {
+    @media (max-width: $s1) {
+      @content;
+    }
+  } @else if $media == s1 {
+    @media (min-width: $s1) {
+      @content;
+    }
+  } @else if $media == s2 {
+    @media (min-width: $s2) {
+      @content;
+    }
+  } @else if $media == s3 {
+    @media (min-width: $s3) {
+      @content;
+    }
+  } @else if $media == s4 {
+    @media (min-width: $s4) {
+      @content;
+    }
+  } @else if $media == s5 {
+    @media (min-width: $s5) {
+      @content;
+    }
+  } @else if $media == s6 {
+    @media (min-width: $s6) {
+      @content;
+    }
+  }
+}
+
+// 5 Escalas de tamaño
+$size-scales: (
+  -2: $h-1,
+  -1: $h0,
+  0: $h1,
+  // 1rem
+    1: $h2,
+  // 1.618rem
+    2: $h3,
+  3: $h4,
+  4: $h5,
+  5: $h6,
+  6: $h6
+);
+@function font-scale($level) {
+  @return map-get($size-scales, $level);
+}
+
+// 5 Escalas de alto de linea
+$line-heights: (
+  -2: $base-line-height / 2.618,
+  -1: $base-line-height / 1.618,
+  0: $base-line-height,
+  // 1*1.6180= 16.180rem
+    1: $base-line-height * 1.618,
+  2: $base-line-height * 2.618,
+  3: $base-line-height * 4.236,
+  4: $base-line-height * 4.236,
+  5: $base-line-height * 6.854,
+  6: $base-line-height * 6.854
+);
+@function line-height($level) {
+  @return map-get($line-heights, $level);
+}
+
+// Funcion magica :)))
+@mixin type-setting($level: 0) {
+  font-size: font-scale($level);
+  line-height: line-height($level);
+}
+
+@function size($level) {
+  @return map-get($size-scales, $level);
+}
+// Padding top
+@mixin padding-top($level: 0) {
+  padding-top: size($level);
+}
+// Padding bottom
+@mixin padding-bottom($level: 0) {
+  padding-bottom: size($level);
+}
+// Margin top
+@mixin margin-top($level: 0) {
+  margin-top: size($level);
+}
+// Margin bottom
+@mixin margin-bottom($level: 0) {
+  margin-bottom: size($level);
+}
+

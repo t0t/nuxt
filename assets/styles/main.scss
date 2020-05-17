@@ -1,0 +1,31 @@
+// ****************************************
+// @TODH BASE IMPORTS
+// ****************************************
+
+@import "./_meyer-reset.scss";
+
+@import "./_variables.scss"; //vacio
+@import "./_colors.scss";
+
+@import "./_vertical_rhythm.scss";
+@import "./_typography.scss";
+@import "./_grid.scss";
+
+@import "./_animations.scss";
+
+@import "./_paddings.scss";
+@import "./_base.scss";
+
+@import "./_components.scss";
+
+.page-transition {
+  transition: all .4s ease-in;
+}
+.page-enter-active,
+.page-leave-active {
+  transition: opacity .5s;
+}
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+}

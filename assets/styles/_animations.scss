@@ -1,0 +1,23 @@
+// ****************************************
+// ANIMATIONS
+// ****************************************
+
+@keyframes menu {
+    0% {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes show {
+    0% {
+      transform: translateY(-$h2);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
